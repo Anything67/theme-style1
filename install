@@ -1,9 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
 ## Author  : Ariful Islam Dorjoy
-## Twitter : @adi1090x
-## Github  : @adi1090x
-## Reddit  : @adi1090x
+## Twitter : @ariful.dorjoy090x
+## Github  : @Anything67090x
 
 ## A simple script to setup oh-my-zsh in termux terminal emulator.
 
@@ -32,7 +31,7 @@ banner () {
 	${BLUE} │${RED}   ┃ ┃┣━┫${CYAN}╺━╸${ORANGE}┃┃┃┗┳┛${CYAN}╺━╸${GREEN}┏━┛┗━┓┣━┫   ${BLUE}│
 	${BLUE} │${RED}   ┗━┛╹ ╹   ${ORANGE}╹ ╹ ╹    ${GREEN}┗━╸┗━┛╹ ╹   ${BLUE}│
 	${BLUE} └─────────────────────────────────┘
-	${CYAN}  By: ${MAGENTA}Aditya Shakya ${ORANGE}// ${MAGENTA}adi1090x
+	${CYAN}  By: ${MAGENTA}Ariful Islam Dorjoy ${ORANGE}// ${MAGENTA}adi1090x
 	EOF
 }
 
