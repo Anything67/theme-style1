@@ -31,7 +31,7 @@ banner () {
 	${BLUE} │${RED}   ┃ ┃┣━┫${CYAN}╺━╸${ORANGE}┃┃┃┗┳┛${CYAN}╺━╸${GREEN}┏━┛┗━┓┣━┫   ${BLUE}│
 	${BLUE} │${RED}   ┗━┛╹ ╹   ${ORANGE}╹ ╹ ╹    ${GREEN}┗━╸┗━┛╹ ╹   ${BLUE}│
 	${BLUE} └─────────────────────────────────┘
-	${CYAN}  By: ${MAGENTA}Ariful Islam Dorjoy ${ORANGE}// ${MAGENTA}adi1090x
+	${CYAN}  By: ${MAGENTA}Ariful Islam Dorjoy ${ORANGE}// ${MAGENTA}Dorjoy090x
 	EOF
 }
 
