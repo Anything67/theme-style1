@@ -5,7 +5,7 @@
 #how to install
 
 # First, clone this repository by typing...
-git clone https://github.com/adi1090x/termux-omz.git
+git clone https://github.com/Anything67/theme-style1
 
 # Change to termux-omz directory
 cd termux-omz
