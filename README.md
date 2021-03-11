@@ -8,7 +8,7 @@
 git clone https://github.com/Anything67/theme-style1
 
 # Change to termux-omz directory
-cd termux-omz
+cd theme-style1
 
 # Make script executable
 chmod +x install
