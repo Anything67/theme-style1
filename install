@@ -59,6 +59,7 @@ install_zsh () {
 		(type -p zsh &> /dev/null) && { echo; echo ${GREEN}" [*] Succesfully Installed!"; echo; } || { echo; echo ${RED}" [!] Error Occured, ZSH is not installed."; echo; reset_color; exit 1; }
 	fi
 }
+
 ## Backup user settings
 backup_tmux () {
 	if [[ ! -d "$HOME/.termux" ]]; then
@@ -68,20 +69,20 @@ backup_tmux () {
 	fi
 }
 
-## Setup theme-style1
-setup_theme-style1 () {
-	{ echo ${ORANGE}" [*] Cloning theme-style1 framework..."; echo ${CYAN}; }
-	git clone --depth 1 git://github.com/robbyrussell/theme-style1.git $HOME/.theme-style1
-	[[ -d $HOME/.theme-style1]] && { echo; echo ${GREEN}" [*] Succesfully Cloned!"; echo; } || { echo; echo ${RED}" [!] Error Occured, failed to clone theme-style1."; echo; reset_color; exit 1; }
+## Setup OMZ
+setup_omz () {
+	{ echo ${ORANGE}" [*] Cloning oh-my-zsh framework..."; echo ${CYAN}; }
+	git clone --depth 1 git://github.com/robbyrussell/oh-my-zsh.git $HOME/.oh-my-zsh
+	[[ -d $HOME/.oh-my-zsh ]] && { echo; echo ${GREEN}" [*] Succesfully Cloned!"; echo; } || { echo; echo ${RED}" [!] Error Occured, failed to clone OMZ."; echo; reset_color; exit 1; }
 	{ echo ${ORANGE}" [*] Setting up configurations..."; echo; }
-	cp $HOME/.theme-style1/templates/zshrc.theme-style1-template $HOME/.zshrc
-	{ echo ${ORANGE}" [*] Changing default shell to 'theme-style1'."; echo; }
-	chsh -s theme-style1
-	{ echo ${ORANGE}" [*] Applying color-scheme, font & theme-style1 theme..."; echo; }
+	cp $HOME/.oh-my-zsh/templates/zshrc.zsh-template $HOME/.zshrc
+	{ echo ${ORANGE}" [*] Changing default shell to 'zsh'."; echo; }
+	chsh -s zsh
+	{ echo ${ORANGE}" [*] Applying color-scheme, font & zsh theme..."; echo; }
 	{ cp $DIR/.files/colors.properties $HOME/.termux/colors.properties; cp $DIR/.files/font.ttf $HOME/.termux/font.ttf; }
-	sed -i 's/theme-style1_THEME="robbyrussell"/theme-style1_THEME="agnoster"/g' $HOME/.theme-style1rc
+	sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g' $HOME/.zshrc
 	{ termux-setup-storage; termux-reload-settings; }
-	{ echo ${GREEN}" [*] Setup completed. Enjoy theme-style1 in Termux."; echo; }
+	{ echo ${GREEN}" [*] Setup completed. Enjoy oh-my-zsh in Termux."; echo; }
 	{ reset_color; exit; }
 }
 
@@ -89,16 +90,16 @@ setup_theme-style1 () {
 main () {
 	banner
 	# Check for previous installation
-	if [[ -d $HOME/.theme-style1 ]]; then
-		{ echo; echo ${GREEN}" [!] ${MAGENTA}theme-style1 ${GREEN}is already installed."; }
+	if [[ -d $HOME/.oh-my-zsh ]]; then
+		{ echo; echo ${GREEN}" [!] ${MAGENTA}Oh-my-zsh ${GREEN}is already installed."; }
 		{ read -p ${ORANGE}" [?] Do you wanna re-install it? (y/n): ${GREEN}"; echo; }
 		if [[ "$REPLY" =~ ^[y/Y]$ ]]; then
-			{ rm -rf $HOME/.theme-style1; install_theme-style1; backup_tmux; setup_omz; } 
+			{ rm -rf $HOME/.oh-my-zsh; install_zsh; backup_tmux; setup_omz; } 
 		else
 			{ reset_color; exit; }
 		fi
 	else
-		{ echo; install_theme-style1; backup_tmux; setup_theme-style1; }
+		{ echo; install_zsh; backup_tmux; setup_omz; }
 	fi
 }
 
