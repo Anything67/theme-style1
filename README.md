@@ -16,4 +16,4 @@ chmod +x install
 # Run install script
 ./install
 
-# And Done, oh-my-zsh is successfully installed on your termux.
+# And Done, theme-style1 is successfully installed on your termux.
