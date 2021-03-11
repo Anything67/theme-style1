@@ -52,7 +52,7 @@ trap exit_on_signal_SIGTERM SIGTERM
 ## Install theme-style1
 install_theme-style1 () {
 	{ echo ${ORANGE}" [*] Installing theme-style1..."${CYAN}; echo; }
-	if [[ -f $PREFIX/bin/theme-style1]]; then
+	if [[ -f $PREFIX/bin/zsh]]; then
 		{ echo ${GREEN}" [*] theme-style1 is already Installed!"; echo; }
 	else
 		{ pkg update -y; pkg install -y theme-style1; }
